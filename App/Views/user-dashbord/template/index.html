@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User-Dashbord</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+      <meta name="description" content="#">
+      <meta name="keywords" content="flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+      <meta name="author" content="#">
+      <!-- Favicon icon -->
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!-- Google font-->
+      <link href="../../../../css.css?family=Mada:300,400,500,600,700" rel="stylesheet">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/css/bootstrap.min.css">
+      <!-- themify icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+      <!-- flag icon framework css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+      <!--SVG Icons Animated-->
+      <link rel="stylesheet" type="text/css" href="assets/icon/SVG-animated/svg-weather.css">
+      <!-- Menu-Search css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/menu-search/css/component.css">
+      <!-- Horizontal-Timeline css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/dashboard/horizontal-timeline/css/style.css">
+      <!-- amchart css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/dashboard/amchart/css/amchart.css">
+      <!-- Calender css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/widget/calender/pignose.calendar.min.css">
+      <!-- flag icon framework css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/flag-icon/flag-icon.min.css">
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <!--color css-->
+
+
+      <link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+  </head>
+
+  <body>
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div></div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <!-- Menu header start -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo" data-navbar-theme="theme4">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="index.html">
+                            <img class="img-fluid" src="assets/images/logo2-removebg-preview.png" alt="Theme-Logo">
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <div>
+                            <ul class="nav-left">
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    <a class="main-search morphsearch-search" href="#">
+                                        <!-- themify icon -->
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </li>
+                                
+                                <li class="mega-menu-top">
+                                    <a href="#">
+                                        Mega
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification row">
+                                       
+                                        <li class="col-sm-3">
+                                            <h6 class="mega-menu-title">SERVICES</h6>
+                                            <ul class="mega-mailbox">
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left">
+                                                            <i class="ti-folder"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5>Data Backup</h5>
+                                                            <small class="text-muted">Store your data</small>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="media">
+                                                        <div class="media-left">
+                                                            <i class="ti-headphone-alt"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5>Support</h5>
+                                                            <small class="text-muted">24-hour support</small>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                
+                                                
+                                            </ul>
+                                        </li>
+                                            
+                                        <li class="col-sm-3">
+                                            <h6 class="mega-menu-title">Contact Us</h6>
+                                            <div class="mega-menu-contact">
+                                                <div class="form-group row">
+                                                    <label for="example-text-input" class="col-3 col-form-label">Name</label>
+                                                    <div class="col-9">
+                                                        <input class="form-control" type="text" placeholder="Artisanal kale" id="example-text-input">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-search-input" class="col-3 col-form-label">Email</label>
+                                                    <div class="col-9">
+                                                        <input class="form-control" type="email" placeholder="Enter your E-mail Id" id="example-search-input">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="example-search-input" class="col-3 col-form-label">Contact</label>
+                                                    <div class="col-9">
+                                                        <input class="form-control" type="number" placeholder="+91-9898989898" id="example-search-input-2">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="exampleTextarea" class="col-3 col-form-label">Message</label>
+                                                    <div class="col-9">
+                                                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav-right">
+                                <li class="header-notification lng-dropdown">
+                                    
+                                    <ul class="show-notification">
+                                        <li>
+                                            <a href="#" data-lng="en">
+                                                <i class="flag-icon flag-icon-gb m-r-5"></i> English
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" data-lng="fr">
+                                                <i class="flag-icon flag-icon-fr m-r-5"></i> French
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header-notification">
+                                    <a href="#!">
+                                        <i class="ti-bell"></i>
+                                        <span class="badge">5</span>
+                                    </a>
+                                    <ul class="show-notification">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        
+                                        
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header-notification">
+                                    <a href="#!" class="displayChatbox">
+                                        <i class="ti-comments"></i>
+                                        <span class="badge">9</span>
+                                    </a>
+                                </li>
+                                <li class="user-profile header-notification">
+                                    <a href="#!">
+                                        <img src="assets/images/user.png" alt="User-Profile-Image">
+                                        <span>User</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification profile-notification">
+                                        <li>
+                                            <a href="#!">
+                                                <i class="ti-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="ti-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="ti-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">
+                                                <i class="ti-layout-sidebar-left"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- search -->
+                            <div id="morphsearch" class="morphsearch">
+                                <form class="morphsearch-form">
+                                    <input class="morphsearch-input" type="search" placeholder="Search...">
+                                    <button class="morphsearch-submit" type="submit">Search</button>
+                                </form>
+                                <div class="morphsearch-content">
+                                    <div class="dummy-column">
+                                        <h2>People</h2>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img class="round" src="../../../../avatar/81b58502541f9445253f30497e53c280.png?s=50&d=identicon&r=G" alt="Sara Soueidan">
+                                            <h3>Alexandern Mcqueen</h3>
+                                        </a>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img class="round" src="../../../../avatar/9bc7250110c667cd35c0826059b81b75.jpeg?s=50&d=identicon&r=G" alt="Shaun Dona">
+                                            <h3>Cyprien DONTSA</h3>
+                                        </a>
+                                    </div>
+                                    <div class="dummy-column">
+                                        <h2>Popular</h2>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img src="assets/images/avatar-1.png" alt="PagePreloadingEffect">
+                                            <h3>Page Preloading </h3>
+                                        </a>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow">
+                                            <h3>Cv cyan-Design</h3>
+                                        </a>
+                                    </div>
+                                    <div class="dummy-column">
+                                        <h2>Recent</h2>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration">
+                                            <h3>Tooltip Styles Inspiration</h3>
+                                        </a>
+                                        <a class="dummy-media-object" href="#!">
+                                            <img src="assets/images/avatar-1.png" alt="NotificationStyles">
+                                            <h3>Notification Styles Inspiration</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /morphsearch-content -->
+                                <span class="morphsearch-close"><i class="icofont icofont-search-alt-1"></i></span>
+                            </div>
+                            <!-- search end -->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Sidebar chat start -->
+            
+            <!-- Sidebar inner chat end-->
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div></div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu ">
+                                    <a href="" data-i18n="#">
+                                        <span class="pcoded-micon"><i class="ti-id-badge"></i></span>
+                                        <span class="pcoded-mtext">Authentication</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="auth-normal-sign-in.html" target="_blank" data-i18n="nav.authentication.login-bg-image">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Login With BG Image</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="">
+                                            <a href="auth-sign-in-social-header-footer.html" target="_blank" data-i18n="nav.authentication.login-soc-h-f">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Login Social With Header And Footer</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-normal-sign-in-header-footer.html" target="_blank" data-i18n="nav.authentication.login-h-f">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Login With Header And Footer</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-sign-up.html" target="_blank" data-i18n="nav.authentication.registration-bg-image">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Registration BG Image</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-sign-up-social.html" target="_blank" data-i18n="nav.authentication.registration-soc-icon">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Registration Social Icon</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-sign-up-social-header-footer.html" target="_blank" data-i18n="nav.authentication.registration-soc-h-f">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Registration Social With Header And Footer</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-sign-up-header-footer.html" target="_blank" data-i18n="nav.authentication.registration-h-f">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Registration With Header And Footer</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-multi-step-sign-up.html" target="_blank" data-i18n="nav.authentication.multi-step-registration">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Multi Step Registration</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="auth-reset-password.html" target="_blank" data-i18n="nav.authentication.forgot-password">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Forgot Password</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" data-i18n="nav.authentication.lock-screen">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Lock Screen</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" data-i18n="nav.authentication.modal">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Modal</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu ">
+                                    <a href="#" data-i18n="nav.user-profile.main">
+                                        <span class="pcoded-micon"><i class="ti-user"></i></span>
+                                        <span class="pcoded-mtext">User Profile</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="#" data-i18n="nav.user-profile.timeline">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Timeline</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" data-i18n="nav.user-profile.timeline-social">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">Timeline Social</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" data-i18n="nav.user-profile.user-profile">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">User Profile</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" data-i18n="nav.user-profile.user-card">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext">User Card</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu ">
+                                    <a href="#" data-i18n="nav.blog.main">
+                                        <span class="pcoded-micon"><i class="ti-comment-alt"></i></span>
+                                        <span class="pcoded-mtext">Blog</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    
+                                </li>
+                               
+                            
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class=" ">
+                                    <a href="#" data-i18n="nav.chat.main">
+                                        <span class="pcoded-micon"><i class="ti-comments"></i></span>
+                                        <span class="pcoded-mtext">Chat</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                
+                            
+                            <ul class="pcoded-item pcoded-left-item">
+                                
+                            <ul class="pcoded-item pcoded-left-item">
+                                
+                                
+                                
+                                <li class="">
+                                    <a href="#" data-i18n="nav.file-upload.main">
+                                        <span class="pcoded-micon"><i class="ti-cloud-up"></i></span>
+                                        <span class="pcoded-mtext">File Upload</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                                
+                                
+                            </ul>
+                            
+                        </div>
+                    </nav>
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-header">
+                                        <div class="page-header-title">
+                                            <h4>Dashboard</h4>
+                                        </div>
+                                        <div class="page-header-breadcrumb">
+                                            <ul class="breadcrumb-title">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html">
+                                                        <i class="icofont icofont-home"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="breadcrumb-item"><a href="#!">Pages</a>
+                                                </li>
+                                                <li class="breadcrumb-item"><a href="#!">Dashboard</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- Visitor Chart Start-->
+                                            <div class="col-md-6 col-xl-4">
+                                                <div class="card">
+                                                    <div class="card-block-big card-visitor-block">
+                                                        <div class="row">
+                                                            <div class="col-sm-8  card-visitor-button">
+                                                                <button class="btn btn-primary btn-icon"><i class="icofont icofont-user-alt-3"></i></button>
+                                                                <div class="card-contain">
+                                                                    <h6>2,534</h6>
+                                                                    <p class="text-muted f-18 m-0">CV Visitors</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 text-center">
+                                                                <span class="visitor-chart"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <div class="card">
+                                                    <div class="card-block-big card-visitor-block">
+                                                        <div class="row">
+                                                            <div class="col-sm-8 card-visitor-button">
+                                                                <button class="btn btn-warning btn-icon"><i class="icofont icofont-shopping-cart"></i></button>
+                                                                <div class="card-contain">
+                                                                    <h6>5,782</h6>
+                                                                    <p class="text-muted f-18 m-0">Total CV Sales</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 text-center">
+                                                                <span class="sale-chart"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+
+                                            
+                                            <!-- Product table Start -->
+                                            <div class="col-md-8">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <h5>CV Detail</h5>
+                                                    </div>
+                                                    <div class="card-block product-table">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr class="text-uppercase">
+                                                                        <th>Product</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>Total</th>
+                                                                        
+                                                                        <th>Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1. CV BLEU-DESIGN</td>
+                                                                        <td>14</td>
+                                                                        <td><button type="button" class="btn btn-primary">XAF 850</button></td>
+                                                                        
+                                                                        <td><button type="button" class="btn btn-success btn-round btn-outline-success">View</button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2. CV GREEN-LANTERN DESIGN</td>
+                                                                        <td>34</td>
+                                                                        <td><button type="button" class="btn btn-primary">XAF 350</button></td>
+                                                                        
+                                                                        <td><button type="button" class="btn btn-success btn-round btn-outline-success">View</button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3. CV DARK-DESIGN 850</td>
+                                                                        <td>45</td>
+                                                                        <td><button type="button" class="btn btn-primary">XAF 550</button></td>
+                                                                        
+                                                                        <td><button type="button" class="btn btn-success btn-round btn-outline-success">View</button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4. CV KAKI DESIGN 785</td>
+                                                                        <td>74</td>
+                                                                        <td><button type="button" class="btn btn-primary">XAF 750</button></td>
+                                                                        
+                                                                        <td><button type="button" class="btn btn-success btn-round btn-outline-success">View</button></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jqurey -->
+<script type="text/javascript" src="../bower_components/jquery/js/jquery.min.js"></script>
+<script src="../bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="../bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="../bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="../bower_components/modernizr/js/css-scrollbars.js"></script>
+<!-- Calender js -->
+<script type="text/javascript" src="../bower_components/moment/js/moment.min.js"></script>
+<script type="text/javascript" src="assets/pages/widget/calender/pignose.calendar.min.js"></script>
+<!-- classie js -->
+<!-- c3 chart js -->
+<script src="../bower_components/c3/js/c3.js"></script>
+<script type="text/javascript" src="../bower_components/classie/js/classie.js"></script>
+<!-- knob js -->
+<script src="assets/pages/chart/knob/jquery.knob.js"></script>
+<script type="text/javascript" src="assets/pages/widget/jquery.sparkline.js"></script>
+<!-- Rickshow Chart js -->
+<script src="../bower_components/d3/js/d3.js"></script>
+<script src="../bower_components/rickshaw/js/rickshaw.js"></script>
+<!-- Morris Chart js -->
+<script src="../bower_components/raphael/js/raphael.min.js"></script>
+<script src="../bower_components/morris.js/js/morris.js"></script>
+<!-- Float Chart js -->
+<script src="assets/pages/chart/float/jquery.flot.js"></script>
+<script src="assets/pages/chart/float/jquery.flot.categories.js"></script>
+<script src="assets/pages/chart/float/jquery.flot.pie.js"></script>
+    <!-- Horizontal-Timeline js -->
+<script type="text/javascript" src="assets/pages/dashboard/horizontal-timeline/js/main.js"></script>
+<!-- amchart js -->
+<script type="text/javascript" src="assets/pages/dashboard/amchart/js/amcharts.js"></script>
+<script type="text/javascript" src="assets/pages/dashboard/amchart/js/serial.js"></script>
+<script type="text/javascript" src="assets/pages/dashboard/amchart/js/light.js"></script>
+<script type="text/javascript" src="assets/pages/dashboard/amchart/js/custom-amchart.js"></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="../bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="../bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+<!-- pcmenu js -->
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/demo-12.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/jquery.mousewheel.min.js"></script>
+</body>
+
+</html>

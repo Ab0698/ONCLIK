@@ -1,0 +1,1222 @@
+
+
+/* Helpers & Reset */
+:root {
+    --c-brand: #1559A4;
+    --c-dark: #1559A4;
+    --c-body: #1559A4;
+    --c-light: #f8f8f8;
+    --f-base: "bold", sans-serif;
+    --n-height: 70px;
+}
+
+*,*::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--c-body);
+    font-family: var(--f-base);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--c-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.heading-xl {
+    font-size: clamp(44px, 10vw, 100px);
+    text-transform: uppercase;
+}
+
+.heading-1 {
+    font-size: clamp(32px, 6vw, 54px);
+}
+
+.heading-2 {
+    font-size: clamp(28px, 4vw, 36px);
+}
+
+.heading-3 {
+    font-size: 20px;
+}
+
+a {
+    color: var(--c-dark);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 140px 0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#signin1:hover{
+    color: #98a5b2;
+  
+    
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--c-brand);
+    font-family: var(--f-base);
+    padding: 16px 34px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.btn-cx{
+    margin-left: 231px;
+}
+#btn-cv{
+    background-color: white;
+    position: relative;
+    top: 65px;
+    height: 78px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin-bottom: 31px;
+    color: #1459a4;
+    border: 3px solid #1459a4;
+    margin-left: -20px;
+}
+
+#btn-cv:hover{
+    background-color: #1459a4;
+    color: white;
+    transition: 1s all ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+
+/* Bar de Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--n-height);
+    display: flex;
+    z-index: 999;
+    background-color: #1559A4;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img{
+    height: 105px;
+    width: 105px;
+}
+
+.brand {
+    color: white;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li:not(:last-child) {
+    margin-right: 44px;
+}
+
+.nav-links li.active a {
+    box-shadow: 0 2px var(--c-brand);
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links li a:hover {
+    color: var(--c-brand);
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    display: none;
+    margin-left: -85px;
+}
+
+.hamburger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    margin-left: -15px;
+    margin: 5px auto;
+    transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.scrolled {
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.scrolled .brand {
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a {
+    color: var(--c-dark);
+}
+
+.scrolled .nav-links li a:hover {
+    color: var(--c-brand);
+}
+
+.scrolled .hamburger span {
+    background-color: var(--c-dark);
+}
+
+/*bloc de responsive*/
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: var(--n-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 24px;
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        background-color: rgb(49, 45, 45);
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        color: var(--c-dark);
+    }
+
+    .nav-links.active {
+        height: 200px;
+    }
+
+    .nav-links li {
+        padding: 6px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Header*/
+
+
+header{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;/*pour enlever les scroll bar*/
+    background-image: url('https://www.pole-emploi.fr/files/live/sites/PE/files/nouveau%20site/candidat/recherche-emploi/CV-en-anglais-850x523.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.797);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+
+header .headertext{ /*son role est de mettre les elements de facon horizontal*/
+    display: flex;  
+    position: absolute;
+    z-index: 3;
+    top: 240px;
+    margin-left: 250px;
+}
+
+.headertext h1{
+    color: white;
+    position: relative;
+    top: 119px;
+    margin-right: 38px;
+    font-size: 2vw;
+   
+}
+.headertext h2{
+    position: relative;
+    font-size: 2vw;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+    text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+}
+.headertext h2::before{ /*animation avant sur le titre */
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+        
+    }
+}
+
+
+.container{
+    background-image: url('');
+} 
+
+#hero .btn-cv{
+   z-index: 2;
+}
+
+#hero h1 {
+    color: white;
+}
+
+@keyframes scrolltodown {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+
+.scroll-to-down {
+    width: 30px;
+    height: 60px;
+    margin-left: -15px;
+    display: grid;
+    place-content: center;
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgba(255,255,255, 0.2);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+}
+
+.scroll-to-down .las {
+    animation: scrolltodown 2s ease infinite;
+}
+
+/* Section title */
+.section-intro {
+    margin-bottom: 44px;
+}
+
+/* Grid*/
+.grid {
+    display: grid;
+    gap: 44px;
+}
+
+.two-col-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-col-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+
+    .grid {
+        gap: 24px;
+    }
+
+    .two-col-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .three-col-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
+/* Service */
+#services .grid {
+    gap: 0;
+}
+.service:nth-child(odd) {
+    background-color: var(--c-light);
+}
+
+.service {
+    padding: 44px;
+}
+
+.service p {
+    font-size: 14px;
+}
+
+.service .icon {
+    font-size: 38px;
+    color: var(--c-brand);
+}
+
+/* Project */
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 44px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    
+}
+
+.project .overlay h2 {
+    color: white;
+}
+
+.project .overlay p {
+    color: rgba(255,255,255, 0.6);
+}
+
+.project:hover .overlay{
+    opacity: 1;
+    display: flex;
+}
+
+.project:hover img {
+    transform: rotate(15deg) scale(1.5);
+}
+
+/* feelback*/
+#blog {
+    background-color: var(--c-light);
+}
+
+#blog .img-1{
+    height: 336px;
+}
+.blog-post h3 {
+    margin-top: 16px;
+}
+
+/* a propos */
+#contact .grid {
+    grid-template-columns: 1fr 2.5fr;
+}
+
+@media (max-width: 768px) {
+    #contact .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+.contact-widget {
+    margin-bottom: 44px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group .form-input {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 0;
+    border: none;
+    font-family: var(--f-base);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-group .form-input:focus {
+    outline: none;
+}
+
+/* Footer */
+footer{
+    background-color: #1459A4;
+    position: relative;
+    top: 1200px;
+    height: 193px;
+}
+.footertxt p{
+    position: relative;
+    top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 3.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#barrw{
+    position: relative;
+    top: 30px;
+    width: auto;
+    margin-left: 1px;
+}
+.icon{
+    display: flex;
+}
+.icon img{
+    height: 30px;
+    margin: 19px;
+    cursor: pointer;
+}
+.logo img{
+    height: 85px;
+}
+.graphiccharte{
+    display: flex;
+    justify-content: space-between;
+    margin: 51px;
+    position: relative;
+    top: -19px;
+}
+
+/* responsive du site web */
+
+/* Appareils extra petits (téléphones, 600px et moins) */
+@media only screen and (max-width: 600px) {
+    /*header responsive */
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--n-height);
+        display: flex;
+        z-index: 999;
+        background-color: #1559A4;
+    }
+    
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar img{
+        height: 85px;
+        width: 85px;
+        margin-left: -11px;
+    }
+    
+    .brand {
+        color: white;
+        font-size: 28px;
+    }
+    
+    .nav-links {
+        display: flex;
+    }
+    
+    .nav-links li:not(:last-child) {
+        margin-right: 44px;
+    }
+    
+    .nav-links li.active a {
+        box-shadow: 0 2px var(--c-brand);
+    }
+    
+    .nav-links li a {
+        color: white;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .nav-links li a:hover {
+        color: var(--c-brand);
+    }
+    
+
+
+
+
+    header{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;/*pour enlever les scroll bar*/
+        background-image: url('https://media.istockphoto.com/id/1149054436/photo/business-man-review-his-resume-application-on-desk-laptop-computer-job-seeker.jpg?s=2048x2048&w=is&k=20&c=Orgm9j2qmje4Fi3ZZsR9EBHvC7FiH_3wTCM_YJkizQQ=');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 668px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 270px;
+        margin-left: -523px;
+        
+    }
+    
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+        margin-left: -143px;
+        font-size: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 8px;
+        font-size: 5vw;
+        margin-left: -28px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+    .headertext h2::before{ /*animation avant sur le titre */
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: white;
+        -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+        border-right: 2px solid white;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+        filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+    }
+    
+    #btn-cv{
+        background-color: white;
+        position: relative;
+        top: 65px;
+        height: 65px;
+        width: 160px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        margin-bottom: 31px;
+        color: #1459a4;
+        border: 3px solid #1459a4;
+        margin-left: -206px;
+    }
+    
+    #btn-cv a:hover{
+        background-color: #1459a4;
+        color: white;
+        transition: 1s all ease-in-out;
+    }
+    
+  
+
+    footer{
+        background-color: #1459A4;
+        position: relative;
+        top: 50px;
+        height: 193px;
+    }
+    .footertxt p{
+        position: relative;
+       
+        text-align: center;
+        color: white;
+        font-size: 0.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    #barrw{
+        position: relative;
+        width: auto;
+        margin-left: 9px;
+    }
+    .icon{
+        display: flex;
+    }
+    .icon img{
+        height: 25px;
+        margin: 21px;
+        cursor: pointer;
+        margin-right: 21px;
+    }
+    .logo img{
+        height: 35px;
+    }
+    .graphiccharte{
+        display: flex;
+        justify-content: space-between;
+        margin: 51px;
+        position: relative;
+        top: -19px;
+    }
+    
+    
+    
+    
+    
+}
+
+
+/* Appareils extra petits (téléphones, 390px et moins) */
+@media only screen and (max-width: 390px) {
+   
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 370px;
+        margin-left: -52px;
+        
+    }
+    
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+        margin-left: -225px;
+        font-size: 6vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 8px;
+        font-size: 6vw;
+        margin-left: -31px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+
+}
+
+/* Petits appareils (tablettes portrait et grands téléphones, 600 pixels et plus) */
+@media only screen and (min-width: 600px) {
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2090px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+
+    header{
+        height: 2090px;
+    }
+
+
+
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 370px;
+        margin-left: -52px;
+        
+    }
+    
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+        margin-left: -52px;
+        font-size: 4vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 8px;
+        font-size: 4vw;
+        margin-left: -18px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+    .headertext h2::before{ /*animation avant sur le titre */
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: white;
+        -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+        border-right: 2px solid white;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+        filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+    }
+
+    #btn-cv{
+        background-color: white;
+        position: relative;
+        top: 65px;
+        height: 65px;
+        width: 160px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        margin-bottom: 31px;
+        color: #1459a4;
+        border: 3px solid #1459a4;
+        margin-left: -26px;
+    }
+    
+    #btn-cv:hover{
+        background-color: #1459a4;
+        color: white;
+        transition: 1s all ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: var(--c-brand);
+        color: white;
+    }
+
+    footer{
+        background-color: #1459A4;
+        position: relative;
+        top: 50px;
+        height: 193px;
+    }
+    .footertxt p{
+        position: relative;
+       
+        text-align: center;
+        color: white;
+        font-size: 0.6rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    #barrw{
+        position: relative;
+        width: auto;
+        margin-left: 9px;
+    }
+    .icon{
+        display: flex;
+    }
+    .icon img{
+        height: 35px;
+        margin: 21px;
+        cursor: pointer;
+        margin-right: -11px;
+    }
+    .logo img{
+        height: 75px;
+    }
+    .graphiccharte{
+        display: flex;
+        justify-content: space-between;
+        margin: 51px;
+        position: relative;
+        top: -19px;
+    }
+    
+    
+
+}
+
+/* Appareils moyens (tablettes paysage, 768 pixels et plus) */
+@media only screen and (min-width: 768px) {
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1028px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+
+    header{
+        height: 1030px;
+    }
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 970px;
+        margin-left: 52px;
+        
+    }
+    
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 55px;
+        margin-left: -91px;
+        font-size: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 55px;
+        font-size: 5vw;
+        margin-left: -18px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+    .headertext h2::before{ /*animation avant sur le titre */
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: white;
+        -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+        border-right: 2px solid white;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+        filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+    }
+
+    #btn-cv{
+        background-color: white;
+        position: relative;
+        top: 65px;
+        height: 65px;
+        width: 160px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        margin-bottom: 31px;
+        color: #1459a4;
+        border: 3px solid #1459a4;
+        margin-left: -86px;
+    }
+    
+    #btn-cv:hover{
+        background-color: #1459a4;
+        color: white;
+        transition: 1s all ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: var(--c-brand);
+        color: white;
+    }
+
+    footer{
+        background-color: #1459A4;
+        position: relative;
+        top: 50px;
+        height: 193px;
+    }
+    .footertxt p{
+        position: relative;
+       
+        text-align: center;
+        color: white;
+        font-size: 0.6rem;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    #barrw{
+        position: relative;
+        width: auto;
+        margin-left: 9px;
+    }
+    .icon{
+        display: flex;
+    }
+    .icon img{
+        height: 35px;
+        margin: 21px;
+        cursor: pointer;
+        margin-right: -11px;
+    }
+    .logo img{
+        height: 75px;
+    }
+    .graphiccharte{
+        display: flex;
+        justify-content: space-between;
+        margin: 51px;
+        position: relative;
+        top: -19px;
+    }
+
+    .blog-post .img-1{
+        max-width: 100%;
+        width: 100%;
+        height: 900px;
+    }
+}
+
+/* Appareils volumineux (ordinateurs portables/de bureau, 992 px et plus) */
+@media only screen and (min-width: 1002px) {
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 608px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+
+
+    header{
+        height: 610px;
+    }
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 270px;
+        margin-left: 52px;
+        
+    }
+    
+
+}
+
+/* Appareils extra larges (grands ordinateurs portables et ordinateurs de bureau, 1200 pixels et plus) */
+@media only screen and (min-width: 1200px) {
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 808px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+      
+    header{
+        height: 810px;
+    }
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 270px;
+        margin-left: 142px;
+        
+    }
+    
+
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+       
+        font-size: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 8px;
+        font-size: 5vw;
+        margin-left: -18px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+
+
+    .btn-cx{
+        margin-left: 240px;
+    }  
+    
+    #btn-cv{
+        background-color: white;
+        position: relative;
+        top: 65px;
+        height: 65px;
+        width: 160px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        margin-bottom: 31px;
+        color: #1459a4;
+        border: 3px solid #1459a4;
+        margin-left: -22px;
+    }
+    
+    #btn-cv:hover{
+        background-color: #1459a4;
+        color: white;
+        transition: 1s all ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: var(--c-brand);
+        color: white;
+    }
+}
+
+
+
+
+@media only screen and (width: 912px) {
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1377px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.897);
+        background-position: center;
+        z-index: 1;
+    }
+
+      .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 470px;
+        margin-left: 142px;
+        
+    }
+
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+       
+        font-size: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        position: relative;
+        top: 8px;
+        font-size: 5vw;
+        margin-left: -18px;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+}
+
